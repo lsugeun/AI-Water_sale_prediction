@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>아산시 생수 판매량 예측</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        input[type="text"] {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 8px;
+            width: 200px;
+        }
+
+        input[type="text"]:read-only {
+            background-color: #e9ecef;
+        }
+    </style>
+</head>
+<body>
+    <h1>아산시 생수 판매량 예측</h1>
+    <button onclick="getWeatherInfo()">날씨 정보 가져오기</button>
+    <p>온도 (°C): <input type="text" id="temperature" readonly></p>
+    <p>습도 (%): <input type="text" id="humidity" readonly></p>
+    <p>예측된 생수 판매량: <span id="prediction"></span></p>
+
+    <!-- TensorFlow.js 라이브러리 로드 -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="model.js"></script>
+</body>
+</html>
